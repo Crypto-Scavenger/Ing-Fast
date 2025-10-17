@@ -74,7 +74,7 @@ class Fasting_Tracker_Core {
 		}
 
 		$fast = $this->database->get_active_fast($user_id);
-		if (!$fast || $fast->id !== absint($session_id)) {
+		if (!$fast || (int)$fast->id !== absint($session_id)) {
 			return new WP_Error('invalid_session', __('Invalid fast session', 'fasting-tracker'));
 		}
 
@@ -92,7 +92,7 @@ class Fasting_Tracker_Core {
 		}
 
 		$fast = $this->database->get_active_fast($user_id);
-		if (!$fast || $fast->id !== absint($session_id)) {
+		if (!$fast || (int)$fast->id !== absint($session_id)) {
 			return new WP_Error('invalid_session', __('Invalid fast session', 'fasting-tracker'));
 		}
 
@@ -110,7 +110,7 @@ class Fasting_Tracker_Core {
 		}
 
 		$fast = $this->database->get_active_fast($user_id);
-		if (!$fast || $fast->id !== absint($session_id)) {
+		if (!$fast || (int)$fast->id !== absint($session_id)) {
 			return new WP_Error('invalid_session', __('Invalid fast session', 'fasting-tracker'));
 		}
 
